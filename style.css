@@ -1,0 +1,197 @@
+/* ==========================================================================
+   1. GOOGLE FONTS YÜKLEMELERİ
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Indie+Flower&display=swap');
+
+/* Sitenin genel menü, buton ve girdi fontu */
+body,
+button,
+input {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ==========================================================================
+   2. POLAROID KART FONTLARI (HİÇ DOKUNULMADI - TAM EL YAZISI)
+   ========================================================================== */
+/* Polaroid Kartının İçindeki Palet İsmi (İnce Yapılı) */
+.polaroid p,
+.polaroid b {
+    font-family: 'Indie Flower', cursive;
+    font-size: 21px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin: 8px 0 2px 0;
+}
+
+/* Kartın altındaki renk kodları alanı (İnce Yapılı) */
+.renk-kod-alani {
+    font-family: 'Indie Flower', cursive;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: 0.5px;
+    background: #fafafa;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+/* ==========================================================================
+   3. POPPINS ENTEGRASYONU (BAŞLIKLAR, SLOGAN VE KATEGORİLER - İNCE YAPILDI)
+   ========================================================================== */
+/* Tüm ana başlıklar Poppins fontuna geçirildi ve İNCE (300) yapıldı */
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Sloganın fontu Poppins ailesiyle kusursuzca eşleşti */
+.site-slogani {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #777;
+    font-size: 16px;
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+
+/* Alt kategori filtre butonları da Poppins ve zarif yapıldı */
+.kategori-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.kategori-btn:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+/* ==========================================================================
+   4. GENEL SAYFA VE YAPI STİLLERİ
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fdfdfd;
+    color: #444;
+}
+
+header {
+    background: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+#kategori-filtre {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    /* Kartları aşağıya iten o harika boşluk */
+    text-align: center;
+}
+
+nav button {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 22px;
+    margin: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+nav button:hover {
+    background: #1a1a1a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.sayfa {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 35px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #f1f1f1;
+}
+
+.polaroid:hover {
+    transform: translateY(-8px) rotate(1deg);
+}
+
+.renk-kutusu {
+    height: 180px;
+    width: 100%;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    border: 1px solid #f9f9f9;
+}
+
+.renk-secici-kutu {
+    background: white;
+    padding: 30px;
+    border: 2px dashed #ddd;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-aksiyon {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+.btn-aksiyon:active {
+    transform: scale(0.95);
+}
+
+.renk-girdisi {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 5px;
+    vertical-align: middle;
+}

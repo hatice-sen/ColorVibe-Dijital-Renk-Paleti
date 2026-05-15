@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ColorVibe | Renk Atölyesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ColorVibe</h1>
+        <p class="site-slogani">
+            Ruhunu yansıtan renk kombinasyonlarını keşfet, yönet ve tasarla.
+        </p>
+        <nav>
+            <button onclick="sayfaAc('bolum-kesfet')">✨ Keşfet</button>
+            <button onclick="sayfaAc('bolum-api')">🌐 API Ara</button>
+            <button onclick="sayfaAc('bolum-fav')">❤️ Favoriler</button>
+            <button onclick="sayfaAc('bolum-palet')">🎨 Atölyem</button>
+            <button onclick="sayfaAc('bolum-admin')">🔒 Yönetici</button>
+        </nav>
+    </header>
+
+    <section id="bolum-kesfet" class="sayfa">
+        <h2>Trend Renk Paletleri</h2>
+        <div id="kategori-filtre" style="margin-top:15px; text-align:center;">
+            <button class="kategori-btn" onclick="kategoriSec('Hepsi')">Hepsi</button>
+            <button class="kategori-btn" onclick="kategoriSec('Pastel')">Pastel</button>
+            <button class="kategori-btn" onclick="kategoriSec('Koyu')">Koyu</button>
+            <button class="kategori-btn" onclick="kategoriSec('Canlı')">Canlı</button>
+            <button class="kategori-btn" onclick="kategoriSec('Soft')">Soft</button>
+        </div>
+        <div id="ana-liste" class="galeri"></div>
+    </section>
+
+
+    <section id="bolum-api" class="sayfa" style="display:none;">
+        <h2>Dış Dünyadan Paletler</h2>
+        <div class="renk-secici-kutu">
+            <input type="text" id="api-arama-input" placeholder="Tema girin (örn: autumn, neon)"
+                style="padding:12px; border-radius:8px; border:1px solid #ddd; width:280px;">
+            <button class="btn-aksiyon" onclick="apiPaletAra()">API ile Keşfet</button>
+        </div>
+        <div id="api-liste" class="galeri"></div>
+    </section>
+
+    <section id="bolum-palet" class="sayfa" style="display:none;">
+        <h2>Kendi Stilini Yarat</h2>
+        <div class="renk-secici-kutu">
+            <p>Renklerini seç ve kendi koleksiyonunu oluştur:</p>
+
+            <div id="renk-input-alani"
+                style="margin: 20px 0; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <div class="renk-kapsayici" style="position: relative; display: inline-block;">
+                    <input type="color" class="renk-girdisi" value="#6c5ce7">
+                    <span class="renk-sil-btn" onclick="this.parentElement.remove()"
+                        style="position: absolute; top: 0; right: 0; background: #ff7675; color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-weight: bold; font-family: 'Poppins', sans-serif;">×</span>
+                </div>
+                <div class="renk-kapsayici" style="position: relative; display: inline-block;">
+                    <input type="color" class="renk-girdisi" value="#a29bfe">
+                    <span class="renk-sil-btn" onclick="this.parentElement.remove()"
+                        style="position: absolute; top: 0; right: 0; background: #ff7675; color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-weight: bold; font-family: 'Poppins', sans-serif;">×</span>
+                </div>
+            </div>
+
+            <button class="btn-aksiyon" onclick="yeniRenkInputEkle()">+ Renk Ekle</button>
+            <button class="btn-aksiyon" onclick="kullaniciPaletiniKaydet()" style="background:#1a1a1a;">Atölyeme
+                Kaydet</button>
+        </div>
+        <h3>Tasarımlarım</h3>
+        <div id="kendi-liste" class="galeri"></div>
+    </section>
+
+    <section id="bolum-fav" class="sayfa" style="display:none;">
+        <h2>Favorilerim</h2>
+        <div id="fav-liste" class="galeri"></div>
+    </section>
+
+    <section id="bolum-admin" class="sayfa" style="display:none;">
+        <h2>Yönetici Erişimi</h2>
+        <div class="renk-secici-kutu">
+            <input type="password" id="admin-sifre" placeholder="Sistem Şifresi"
+                style="padding:10px; border-radius:8px; border:1px solid #ddd;">
+            <button class="btn-aksiyon" onclick="adminGiris()">Giriş Yap</button>
+        </div>
+    </section>
+
+    <script src="hazir_palet.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
