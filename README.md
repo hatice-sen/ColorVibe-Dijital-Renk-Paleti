@@ -1,4 +1,4 @@
-# ColorVibe | Renk Atölyesi
+# ColorVibe | Dijital Renk Paleti ve Stil Kartları
 
 ColorVibe, kullanıcıların kendi tarzlarına uygun renk paletleri keşfetmesini, tasarlamasını ve yönetmesini sağlayan web tabanlı dinamik bir platformdur. Proje, modern web standartları ve kullanıcı dostu estetik bir arayüz (Polaroid Grid Tasarımı) gözetilerek geliştirilmiştir.
 
